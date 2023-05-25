@@ -308,6 +308,7 @@ html {
 /* Menu Section */
 
 .menu h2,
+.products h2,
 .contact h2 {
   margin-bottom: 1rem;
 }
@@ -332,7 +333,7 @@ html {
 
 .menu .row .menu-card {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 .menu .row .menu-card img {
   border-radius: 50%;
