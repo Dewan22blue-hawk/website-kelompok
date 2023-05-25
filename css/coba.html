@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Search Function Example</title>
+    <style>
+      /* Style untuk tombol search */
+      #searchInput {
+        width: 300px;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+      /* Style untuk item pada daftar */
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* menghindari double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: flex;
+        flex-wrap: row nowrap;
+        width: 50%;
+        justify-content: center;
+      }
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Search Function Example</h1>
+
+    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for names.." />
+
+    <ul id="myUL">
+      <li><a href="#">John</a></li>
+      <li><a href="#">Paul</a></li>
+      <li><a href="#">George</a></li>
+      <li><a href="#">Ringo</a></li>
+      <li><a href="#">Rudi</a></li>
+      <li><a href="#">singo</a></li>
+      <li><a href="#">linggo</a></li>
+      <li><a href="#">Rino</a></li>
+      <li><a href="#">Rani</a></li>
+      <li><a href="#">Bangsat</a></li>
+      <li><a href="#">Asu</a></li>
+    </ul>
+
+    <script>
+      function searchFunction() {
+        // Ambil nilai input dari pengguna
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        // Loop melalui semua item daftar dan sembunyikan yang tidak cocok dengan kata kunci pencarian
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+      function searchFunction() {
+        // Ambil nilai input dari pengguna
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+
+        // Loop melalui semua item daftar dan sembunyikan yang tidak cocok dengan kata kunci pencarian
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
