@@ -45,15 +45,15 @@ document.addEventListener("click", function (e) {
 
 // Modal Box
 
-const itemDetailModal = document.querySelector("#item-detail-modal");
-const itemDetailButton = document.querySelectorAll(".item-detail-button");
+// const itemDetailModal = document.querySelector("#item-detail-modal");
+// const itemDetailButton = document.querySelectorAll(".item-detail-button");
 
-itemDetailButton.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal.style.display = "flex";
-    e.preventDefault();
-  };
-});
+// itemDetailButton.forEach((btn) => {
+//   btn.onclick = (e) => {
+//     itemDetailModal.style.display = "flex";
+//     e.preventDefault();
+//   };
+// });
 
 // Klik Tombol Close
 
