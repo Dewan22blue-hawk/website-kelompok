@@ -69,3 +69,19 @@ window.onclick = (e) => {
     itemDetailModal.style.display = "none";
   }
 };
+
+// function button kirim pesan
+function sendMessage() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  // Buat pesan pengantar dengan menggabungkan data yang diperlukan
+  var text = "Halo, saya " + name + ". Saya menghubungi Anda melalui formulir kontak di situs web. \n\nPesan saya adalah:\n" + message;
+
+  // Buat URL untuk membuka WhatsApp dengan pesan pengantar yang telah dibuat
+  var url = "https://wa.me/6285237545993?text=" + encodeURIComponent(text);
+
+  // Buka WhatsApp di jendela/layar baru
+  window.open(url);
+}
